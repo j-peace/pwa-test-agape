@@ -20,10 +20,18 @@ npm run preview
 
 ## Deploy (Vercel)
 
-1. Conecte o repositório na [Vercel](https://vercel.com)
-2. Framework: Vite
-3. Após deploy, substitua `SEU-DEPLOY.vercel.app` em `email-demo.html` pela URL real
-4. Envie o HTML do email manualmente para a convidada
+**Produção:** https://otimizador-filas-agape.vercel.app/
+
+O repositório [j-peace/pwa-test-agape](https://github.com/j-peace/pwa-test-agape) está ligado à Vercel: cada `git push` na `main` gera build e publicação automática.
+
+Deploy manual (opcional, exige `npx vercel login` uma vez):
+
+```bash
+npm run build
+npx vercel deploy --prod --yes
+```
+
+O `email-demo.html` já usa a URL de produção. Envie o HTML manualmente para a convidada.
 
 ## Fluxo da demo
 

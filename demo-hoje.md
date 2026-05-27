@@ -182,15 +182,15 @@ Ordem de implementação. Tudo **frontend estático/mock** — dados em `localSt
 
 ## Checklist final antes de mandar pra ela
 
-- [ ] URL pública funcionando (HTTPS — obrigatório pra câmera).
+- [x] URL pública: https://otimizador-filas-agape.vercel.app/ (HTTPS)
 - [ ] Página `/` abre no celular dela com instrução de instalar.
-- [ ] Após instalar, lista de eventos aparece.
+- [ ] Após instalar, lista de eventos aparece (**iPhone:** remover ícone antigo e readicionar após deploy).
 - [ ] “Casamento Aline” → leitor funciona.
 - [ ] 1ª leitura verde, 2ª “Já entrou”.
 - [ ] CPF `98765432100` funciona.
 - [ ] Dashboard sobe o contador.
 - [ ] Botões Wallet → “Em breve”.
-- [ ] Email HTML pronto pra você enviar manualmente.
+- [x] Email HTML (`email-demo.html`) com URL de produção — enviar manualmente.
 
 ---
 
@@ -221,7 +221,9 @@ Ordem de implementação. Tudo **frontend estático/mock** — dados em `localSt
 ## Status — implementado
 
 - Projeto em `c:\md\cerimonial-leitor-qr`
-- Rodar: `npm install` → `npm run dev`
+- **Produção:** https://otimizador-filas-agape.vercel.app/
+- Rodar local: `npm install` → `npm run dev`
 - Build: `npm run build` → `npm run preview`
-- Email: editar `email-demo.html` com URL do deploy
+- Deploy: push na `main` (Vercel) ou `npx vercel deploy --prod --yes` após login
+- Email: `email-demo.html` (copiar e enviar)
 - Reset demo: `localStorage.removeItem('agape_demo_state')`
