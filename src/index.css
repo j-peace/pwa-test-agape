@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta Ágape (referência layout + logo) */
+  --color-gold: #b8956b;
+  --color-gold-light: #d4b896;
+  --color-gold-dark: #7a6348;
+  --color-gold-deep: #5c4a36;
+  --color-cream: #faf7f2;
+  --color-cream-dark: #f0e9df;
+  --color-ink: #3d3228;
+  --color-ink-muted: #6b5d4f;
+  --color-success: #5a7d5c;
+  --color-success-bg: #e8f0e8;
+  --color-warn: #c17f4a;
+  --color-warn-bg: #faf0e8;
+  --color-danger: #a85c5c;
+  --color-danger-bg: #faeaea;
+
+  --font-serif: "Alice", Georgia, "Times New Roman", serif;
+  --font-display: "Courgette", cursive;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-serif);
+  color: var(--color-ink);
+  background: var(--color-cream);
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--color-gold-deep);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Botão primário estilo marca */
+.btn-gold {
+  background: linear-gradient(
+    180deg,
+    var(--color-gold-light) 0%,
+    var(--color-gold) 50%,
+    var(--color-gold-dark) 100%
+  );
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(61, 50, 40, 0.25);
+  box-shadow: 0 2px 8px rgba(122, 99, 72, 0.35);
+}
+
+.btn-gold:active {
+  transform: scale(0.98);
+}
+
+.card-brand {
+  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--color-gold) 25%, transparent);
+  box-shadow: 0 2px 12px rgba(61, 50, 40, 0.06);
+}
+
+.app-shell {
+  min-height: 100dvh;
+  max-width: 430px;
+  margin: 0 auto;
+  background: var(--color-cream);
+  box-shadow: 0 0 48px rgba(61, 50, 40, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top, 0);
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
