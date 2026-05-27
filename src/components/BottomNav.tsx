@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { ManageEventsModal } from "./ManageEventsModal";
 import { bottomNav } from "../lib/copy";
 
 type TabId = "scan" | "dashboard" | "gerenciar" | "profile";
@@ -20,6 +22,7 @@ function NavIcon({
 }
 
 export function BottomNav() {
+  const [manageOpen, setManageOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const path = location.pathname;
@@ -41,7 +44,7 @@ export function BottomNav() {
   const active = activeTab();
 
   const handleGerenciar = () => {
-    alert(bottomNav.manageAlert);
+    setManageOpen(true);
   };
 
   const items: {
@@ -72,7 +75,9 @@ export function BottomNav() {
   ];
 
   return (
-    <nav className="shrink-0 border-t border-gold/20 bg-cream/98 backdrop-blur-md safe-bottom">
+    <>
+      <ManageEventsModal open={manageOpen} onClose={() => setManageOpen(false)} />
+      <nav className="shrink-0 border-t border-gold/20 bg-cream/98 backdrop-blur-md safe-bottom">
       <div className="grid h-16 grid-cols-4">
         {items.map((item) => {
           const isActive = item.id === active;
@@ -126,6 +131,7 @@ export function BottomNav() {
         })}
       </div>
     </nav>
+    </>
   );
 }
 

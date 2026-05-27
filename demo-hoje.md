@@ -149,7 +149,7 @@ Ordem de implementação. Tudo **frontend estático/mock** — dados em `localSt
 31. Cards: **Esperados: 10** (fixo mock) | **Entraram: N** (dinâmico).
 32. `N` incrementa a cada check-in bem-sucedido (localStorage).
 33. Barra de progresso visual (%).
-34. Botão atualizar (opcional — já reage ao estado).
+34. Botão atualizar (cional — já reage ao estado).
 
 ### Fase 8 — Admin mock (desktop only) (~20 min)
 

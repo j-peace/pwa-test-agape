@@ -18,17 +18,44 @@ export const appName = {
 } as const;
 
 export const download = {
-  installedTitle: "Pronto para a porta",
-  installedBody: "Agora você consegue liberar convidados sem aquele gargalo na entrada.",
-  openApp: "Ir para a porta do evento",
   tagline: "Chega de fila na entrada",
-  subtitle: "Saiba quem já chegou — sem lista de papel, sem travar na porta",
-  installTitle: "Use na porta do evento",
-  installBody:
-    "Para usar na porta, instale no celular de quem recepciona. Abre direto da tela inicial — na correria da entrada, isso faz diferença.",
-  installButton: "Colocar na tela do celular",
-  installHint: "Ou siga o passo a passo abaixo",
-  demoLink: "Só quero ver como funciona (demo)",
+  subtitle: "Disponível só como app no celular — não funciona no navegador",
+  browserBlocked:
+    "Para liberar convidados na porta, instale o app. Pelo navegador não dá para usar.",
+  androidInstallButton: "Instalar no celular",
+  androidInstallHint:
+    "A instalação é rápida. Depois, abra pelo ícone na tela inicial.",
+  androidFallbackTitle: "Não apareceu o botão?",
+  androidFallbackSteps: [
+    "Toque nos três pontinhos do Chrome",
+    'Escolha "Instalar app" ou "Adicionar à tela inicial"',
+    "Confirme e volte aqui para ver como abrir",
+  ],
+  iosSteps: [
+    {
+      title: "Toque em Compartilhar",
+      detail: "Ícone na barra inferior do Safari (quadrado com seta)",
+    },
+    {
+      title: "Adicionar à Tela de Início",
+      detail: 'Role o menu e toque em "Adicionar à Tela de Início"',
+    },
+    {
+      title: "Abra pelo ícone",
+      detail: `Confirme e use o ícone ${appName.short} na tela inicial — não pelo Safari`,
+    },
+  ],
+  postInstallTitle: "App instalado",
+  postInstallBody:
+    "Feche esta página do navegador. Na tela inicial do celular, toque no ícone do app para começar.",
+  postInstallSteps: [
+    "Saia do Chrome ou Safari",
+    `Procure o ícone "${appName.short}" na tela inicial`,
+    "Toque no ícone para abrir o app",
+  ],
+  desktopTitle: "Use no celular",
+  desktopBody:
+    "Este app foi feito para a equipe na porta do evento. Abra o link no celular (Chrome ou Safari) para instalar.",
 } as const;
 
 export const events = {
@@ -98,8 +125,15 @@ export const bottomNav = {
   scanRoute: "/app/eventos/casamento-aline/ler",
   live: "Quem chegou",
   manage: "Meus eventos",
-  manageAlert:
-    "Organizar eventos e listas de convidados ainda será pelo computador.\n\nEm breve você faz tudo daqui — por enquanto, o foco é acabar com a fila na porta.",
+  manageModal: {
+    badge: "Em breve",
+    title: "Meus eventos no computador",
+    lead: "Criar casamentos, importar lista de convidados e enviar convites ainda é pelo computador.",
+    focus:
+      "Neste app do celular, o foco é a porta: ler convites e ver quem já chegou — sem fila.",
+    soon: "Em breve você organiza tudo daqui também.",
+    dismiss: "Entendi",
+  },
   profile: "Perfil",
 } as const;
 

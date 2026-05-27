@@ -19,7 +19,9 @@ export default defineConfig({
         background_color: "#faf7f2",
         display: "standalone",
         orientation: "portrait",
-        start_url: "/app/dashboard",
+        id: "/",
+        start_url: "/",
+        scope: "/",
         icons: [
           {
             src: "/agape-logo.jpg",
@@ -31,6 +33,8 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ["**/*.{js,css,html,ico,jpg,svg,png,woff2}"],
+        navigateFallback: "index.html",
+        navigateFallbackDenylist: [/^\/api\//],
       },
     }),
   ],

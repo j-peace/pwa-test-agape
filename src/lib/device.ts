@@ -1,6 +1,8 @@
 export function isStandalonePwa(): boolean {
+  const mq = window.matchMedia.bind(window);
   return (
-    window.matchMedia("(display-mode: standalone)").matches ||
+    mq("(display-mode: standalone)").matches ||
+    mq("(display-mode: fullscreen)").matches ||
     (window.navigator as Navigator & { standalone?: boolean }).standalone ===
       true
   );
