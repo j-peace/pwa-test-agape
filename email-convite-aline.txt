@@ -1,0 +1,37 @@
+Assunto: Seu convite — Casamento Aline | Ágape Realizações
+
+---
+
+Olá, Aline!
+
+Que alegria ter você conosco no Casamento Aline, dia 18 de outubro de 2026, às 19h.
+
+Na porta do evento, você não precisa procurar papel na bolsa nem ficar na fila — é só mostrar o convite abaixo (no celular ou impresso). A equipe lê em segundos e você entra.
+
+Seu convite (QR code):
+https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=agape-demo-aline
+
+(Ou abra o e-mail em HTML — anexo/cópia do arquivo email-demo.html — para ver o convite bonito com a marca Ágape.)
+
+Em breve você também poderá guardar o convite no Google Wallet ou na Apple Wallet, direto do e-mail.
+
+---
+
+Para quem recepciona na porta (equipe Ágape):
+
+Instale o app no celular antes do evento:
+https://otimizador-filas-agape.vercel.app/
+
+1. Abra o link no Safari (iPhone) ou Chrome (Android)
+2. Toque em “Adicionar à Tela de Início” / “Instalar app”
+3. Abra pelo ícone na tela inicial (não pelo navegador)
+4. Escolha o evento “Casamento Aline” e use “Ler QR code”
+
+Dica de teste: o CPF 987.654.321-00 também libera entrada na demonstração.
+
+---
+
+Com carinho,
+Ágape Realizações
+
+(Sem Fila na Porta — demonstração)

@@ -32,18 +32,24 @@ export function SettingsPage() {
           <SettingsRow label={settings.emailBrand} hint="Em breve" disabled />
         </section>
 
-        <button
-          type="button"
-          onClick={() => {
-            if (confirm(settings.resetConfirm)) {
-              resetDemo();
-              alert(settings.resetDone);
-            }
-          }}
-          className="w-full rounded-xl border border-gold/35 py-3 text-sm text-gold-deep"
-        >
-          {settings.reset}
-        </button>
+        <section className="rounded-2xl border-2 border-warn/50 bg-warn-bg p-4 shadow-sm">
+          <p className="text-xs font-medium uppercase tracking-wide text-warn">
+            {settings.demo}
+          </p>
+          <p className="mt-1 text-sm text-ink-muted">{settings.resetHint}</p>
+          <button
+            type="button"
+            onClick={() => {
+              if (confirm(settings.resetConfirm)) {
+                resetDemo();
+                alert(settings.resetDone);
+              }
+            }}
+            className="mt-4 w-full rounded-xl border-2 border-warn bg-white py-4 text-base font-medium text-warn shadow-md active:scale-[0.98]"
+          >
+            ↺ {settings.reset}
+          </button>
+        </section>
 
         <p className="mt-6 text-center text-xs text-ink-muted/70">
           {settings.footer}
